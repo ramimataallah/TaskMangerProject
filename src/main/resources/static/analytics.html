@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TaskFlow · Analytics</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">TaskFlow</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">📋 Tasks</a>
+                <a href="analytics.html" class="active">📊 Analytics</a>
+                <a href="calendar.html">📅 Calendar</a>
+                <a href="categories.html">🏷️ Categories</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <h1 class="section-title" style="font-size: 28px; margin-bottom: 32px;">📊 Analytics Dashboard</h1>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Total Tasks</div>
+                <div class="stat-value" id="totalTasks">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Completed</div>
+                <div class="stat-value" id="completedTasks">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Pending</div>
+                <div class="stat-value" id="pendingTasks">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Completion Rate</div>
+                <div class="stat-value" id="completionRate">0%</div>
+            </div>
+        </div>
+        
+        <div class="progress-section">
+            <h3>🎯 Overall Progress</h3>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar">0%</div>
+            </div>
+            <p class="text-muted" id="progressText">Loading statistics...</p>
+        </div>
+        
+        <div class="progress-section">
+            <h3>💡 Productivity Insights</h3>
+            <ul class="insight-list" id="insightsList">
+                <li>✨ Loading insights...</li>
+            </ul>
+        </div>
+    </main>
+
+    <div id="toast" class="toast"></div>
+    
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', loadAnalytics);
+    </script>
+</body>
+</html>
